@@ -12,37 +12,54 @@ public class Wheels {
     public Wheels(boolean isWide) {
         this.isWide = isWide;
         price = decrementWheels(isWide);
-
+        if (price!=0){
+            totalWheelsCount--;
+        }
     }
 
     private int decrementWheels(boolean isWide){
         if (isWide){
-            try {
-                totalWideWheelsCount--;
-            } catch (ArithmeticException e){
-                System.out.println("Not enough wheels in the inventory!");
-            }finally {
-                totalWheelsCount--;
-                return 300;
-            }
+            if(--totalWideWheelsCount<0){
+                System.err.println("Not enough Wide Wheels.");
+                totalWideWheelsCount++;
+            }else return 200;
         }else {
-            try {
-                totalNormalWheelCount--;
-            } catch (ArithmeticException e){
-                System.out.println("Not enough wheels in the inventory!");
-            }finally {
-                totalWheelsCount--;
-                return 200;
-            }
+            if(--totalNormalWheelCount<0){
+                System.err.println("Not enough Wide Wheels.");
+                totalNormalWheelCount++;
+            }else return 100;
+        }
+        return 0;
+    }
+
+    public static void addWheels(int standardWheels, int wideWheels) {
+        if (standardWheels>=0&&wideWheels>=0){
+            totalNormalWheelCount+=standardWheels;
+            totalWideWheelsCount+=wideWheels;
+            totalWheelsCount+=(standardWheels+wideWheels);
+        }
+        else {
+            System.err.println("Error, negative value not allowed");
         }
     }
 
-    public static void setWheelsCount(int totalWheelsCount, boolean isWide) {
-        Wheels.totalWheelsCount = totalWheelsCount;
-        if (isWide){
-            totalWideWheelsCount++;
-        }else {
-            totalNormalWheelCount++;
-        }
+    public int getPrice() {
+        return price;
+    }
+
+    public static int getTotalWheelsCount() {
+        return totalWheelsCount;
+    }
+
+    public static int getTotalWideWheelsCount() {
+        return totalWideWheelsCount;
+    }
+
+    public static int getTotalNormalWheelCount() {
+        return totalNormalWheelCount;
+    }
+
+    public boolean isWide() {
+        return isWide;
     }
 }

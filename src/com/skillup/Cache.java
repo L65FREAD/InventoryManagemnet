@@ -5,16 +5,10 @@ import java.util.HashMap;
 
 public class Cache {
     public static void main(String[] args) {
-
-        int[] inte = {1,0,3};
-        try{
-            System.out.println(inte[8]);
-        }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println(inte[8]);
-        }catch (Exception e){
-            System.out.println("finally");
-        }finally {
-            System.out.println("in finally");
-        }
+        Wheels.addWheels(2,0);
+        Wheels wheels = new Wheels(true);
+        System.out.println(wheels.getPrice());
+        int x = 0;
+        if ((--x)<0) System.out.println(x);
     }
 }
