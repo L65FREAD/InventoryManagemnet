@@ -1,4 +1,4 @@
-# InventoryManagemnet
+# Inventory Management system for radio controlled cars
 This project implents consle based Inventory Management using Java and MVC. 
 
 Final Project: Create and Application that fulfills the requirements below. Utilize what you have learned from this course to complete this project. You can team-up with up to 3 developers and collaborate. Use the Software Development Life Cycle to guide you through this project. You must share your code with each other, so you all have a copy. You may even define roles for each out, but you should all collaborate as a team. Include comments where needed. Test your code. You will be doing a presentation to the class and guests. They will ask questions on your approach to this product. This application is a proof of concept for a retail application, so you can provide currency values for the product. Good Luck to you all.
