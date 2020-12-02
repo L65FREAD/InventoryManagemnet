@@ -1,4 +1,4 @@
-package com.skillup;
+package Model;
 
 public interface Purchasable {
 

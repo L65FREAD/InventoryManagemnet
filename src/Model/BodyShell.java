@@ -1,6 +1,6 @@
-package com.skillup;
+package Model;
 
-public class BodyShell implements Purchasable{
+public class BodyShell implements Purchasable {
     private String bodyShellType;
     private final double price;
 
