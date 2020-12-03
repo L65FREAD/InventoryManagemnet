@@ -3,8 +3,11 @@ package Controller;
 import Model.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class InventoryController {
+    ArrayList<String> availableParts = new ArrayList<>(Arrays
+            .asList("Battery","Motor","BodyShell","Shocks","Wheels","RemoteController","Charger"));
     ArrayList<Battery> batteries = new ArrayList<>();
     ArrayList<Motor> motors = new ArrayList<>();
     ArrayList<BodyShell> bodyShells = new ArrayList<>();
@@ -31,6 +34,16 @@ public class InventoryController {
                 motors.add(motor);
             }
             return true;
+        }
+        return false;
+    }
+
+    public boolean add(Object object,int count){
+        String objectName = object.getClass().getName();
+        for(String part : availableParts){
+            if (part.equals(objectName)){
+                return true;
+            }
         }
         return false;
     }

@@ -3,7 +3,7 @@ package com.skillup;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-//TODO Ignore this Class
+//Ignore this Class
 
 
 public class Cache {
@@ -14,11 +14,18 @@ public class Cache {
 //        int x = 0;
 //        if ((--x)<0) System.out.println(x);
 
+//
+//
+//         final ArrayList<String> availableShells = new ArrayList<>
+//                (Arrays.asList("SPORTS","SUV","CLASSIC","ATV","DUNE BUGGY","CRAWLERS","MILITARY","TRUCKS"));
+//        String i= "classic";
+////        if (availableShells.contains(i.toUpperCase())) System.out.print("Hello there mate");
+//        String a = new String("Integer");
+//        Class aB = a.getClass();
+//        System.out.println(aB.getName());
 
+    }
+    public static void stirng(Object obj ){
 
-         final ArrayList<String> availableShells = new ArrayList<>
-                (Arrays.asList("SPORTS","SUV","CLASSIC","ATV","DUNE BUGGY","CRAWLERS","MILITARY","TRUCKS"));
-        String i= "classic";
-        if (availableShells.contains(i.toUpperCase())) System.out.print("Hello there mate");
     }
 }
