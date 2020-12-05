@@ -1,9 +1,12 @@
 package Controller;
 
 import Model.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class InventoryController {
     ArrayList<String> availableParts = new ArrayList<>(Arrays
@@ -15,6 +18,11 @@ public class InventoryController {
     ArrayList<Wheels> wheels = new ArrayList<>();
     ArrayList<RemoteController> remoteControllers = new ArrayList<>();
     ArrayList<Charger> chargers = new ArrayList<>();
+//
+//    Map<String, ArrayList> arrayListOfParts=
+//            Map.of("Battery",batteries,"Motor",motors,
+//                    "BodyShell",bodyShells,"Shocks",shocks, "Wheels",wheels
+//                    ,"RemoteController",remoteControllers,"Chargers",chargers);
 
     public boolean addBatteries(int count){
         if (count>0) {
@@ -38,15 +46,36 @@ public class InventoryController {
         return false;
     }
 
-    public boolean add(Object object,int count){
-        String objectName = object.getClass().getName();
-        for(String part : availableParts){
-            if (part.equals(objectName)){
-                return true;
-            }
-        }
-        return false;
-    }
+//    public boolean add(String itemName, int count){
+//        for(String part : availableParts){
+//            if (part.equals(itemName)){;
+//                switch (itemName){
+//                    case "Battery":
+//                        addBatteries(count);
+//                        break;
+//                    case "Motor":
+//                        addBatteries(count);
+//                        break;
+//                    case "BodyShell":
+//                        addBatteries(count);
+//                        break;
+//                    case "Shocks":
+//                        addShocks(count);
+//                        break;
+//                    case "Wheels":
+//                        addWheels(count);
+//                        break;
+//                    case "RemoteController":
+//                        addRemoteControllers(count);
+//                        break;
+//                    case "Chargers":
+//                        addChargers(count);
+//                        break;
+//                }
+//            }
+//        }
+//        return false;
+//    }
 
     public boolean addRemoteControllers(int count){
         if (count>0) {
@@ -102,7 +131,7 @@ public class InventoryController {
 
     }
 
-    public boolean addCharger(int count){
+    public boolean addChargers(int count){
         if (count>0) {
             for (int i = 0; i < count; i++) {
                 Charger charger = new Charger();
@@ -149,4 +178,6 @@ public class InventoryController {
         }
         return null;
     }
+
+    
 }

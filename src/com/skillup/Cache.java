@@ -15,15 +15,12 @@ public class Cache {
 //        if ((--x)<0) System.out.println(x);
 
 //
-//
-//         final ArrayList<String> availableShells = new ArrayList<>
-//                (Arrays.asList("SPORTS","SUV","CLASSIC","ATV","DUNE BUGGY","CRAWLERS","MILITARY","TRUCKS"));
-//        String i= "classic";
-////        if (availableShells.contains(i.toUpperCase())) System.out.print("Hello there mate");
-//        String a = new String("Integer");
-//        Class aB = a.getClass();
-//        System.out.println(aB.getName());
 
+         final ArrayList<String> availableShells = new ArrayList<>
+                (Arrays.asList("SPORTS","SUV","CLASSIC","ATV","DUNE BUGGY","CRAWLERS","MILITARY","TRUCKS"));
+        Object obj;
+        obj = new String("ok");
+        availableShells.getClass();
     }
     public static void stirng(Object obj ){
 
